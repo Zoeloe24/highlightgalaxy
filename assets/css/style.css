@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&family=Manrope:wght@400;700&display=swap");
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+.pink {
+  color: #E56A63;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hide-lg {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  padding: 0 15%;
+}
+.navbar .navbar-brand {
+  width: 100px;
+}
+.navbar .navbar-nav {
+  gap: 20px;
+}
+.navbar .navbar-nav .nav-item {
+  transition: all 0.3s ease;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #000;
+}
+.navbar .navbar-nav .nav-item:hover {
+  border-bottom: 2px solid #26357D;
+}
+.navbar .navbar-nav .nav-item:hover .nav-link {
+  color: #26357D;
+}
+.navbar .navbar-nav .active {
+  border-bottom: 2px solid #26357D;
+}
+.navbar .navbar-nav .active .nav-link {
+  color: #26357D !important;
+  font-weight: bold;
+}
+
+.home-wrapper {
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 15%;
+  position: relative;
+}
+.home-wrapper .elipse-top-left {
+  width: 70%;
+  height: 130%;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: #36ccf9;
+  filter: blur(200px);
+  position: fixed;
+  top: -40%;
+  left: -10%;
+}
+.home-wrapper .elipse-bottom-right {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: #C4A37F;
+  filter: blur(250px);
+  position: fixed;
+  bottom: -15%;
+  right: -15%;
+}
+.home-wrapper .image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 55rem;
+  filter: drop-shadow(0 0 5px #C4A37F);
+}
+
+.banner {
+  height: 100vh;
+}
+.banner h1 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -2.64px;
+  margin-top: 20rem;
+  color: #26357D;
+  margin-bottom: 0;
+}
+.banner h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+.banner p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.banner .so-btn {
+  background-color: #26357D;
+  border: 1px solid #26357D;
+  color: #FFF;
+  padding: 10px 40px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.banner .so-btn:hover {
+  transform: translateX(1rem);
+}
+
+.about {
+  background: #26357D;
+}
+.about .navbar .navbar-nav .nav-item .nav-link {
+  color: #FFF;
+}
+.about .navbar .navbar-nav .nav-item:hover {
+  border-color: #36ccf9;
+}
+.about .navbar .navbar-nav .nav-item:hover .nav-link {
+  color: #36ccf9;
+}
+.about .navbar .navbar-nav .active {
+  border-color: #36ccf9;
+}
+.about .navbar .navbar-nav .active .nav-link {
+  color: #36ccf9 !important;
+}
+.about .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .banner h1 {
+  color: #FFF;
+  margin-top: unset;
+  margin-bottom: 1.5rem;
+}
+.about .banner p {
+  color: #cfcfcf;
+}
+.about .banner img {
+  border-radius: 5px;
+}
+.about .banner .icons {
+  margin-top: 9rem;
+}
+.about .banner .icons .so-box {
+  background-color: #cfcfcf;
+  border-radius: 5px;
+  color: #1d1d1d;
+  padding: 10px 30px;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+.about .banner .icons .so-box h4 {
+  font-family: "Inter", sans-serif;
+}
+.about .banner .icons .so-box p {
+  color: #1d1d1d;
+  font-size: 0.85rem;
+}
+.about .banner .icons .so-box:hover {
+  background-color: #E56A63;
+}
+.about .banner .icons .so-box:hover h4 {
+  color: #1d1d1d;
+}
+.about .banner .icons .so-box:hover p {
+  color: #1d1d1d;
+}
+.about .banner .icons .so-box:hover svg path {
+  fill: #1d1d1d;
+}
+.about .banner .so-contact .so-box {
+  height: 9rem;
+}
+.about .banner .so-contact .so-box svg {
+  width: 30px;
+  height: 40px;
+}
+.about .banner .so-form {
+  background-color: #FFF;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+}
+.about .banner .so-form .form-control {
+  background-color: #FFF;
+  border-color: #26357D;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in;
+}
+.about .banner .so-form .form-control:focus {
+  border-color: #E56A63;
+  outline: unset;
+  box-shadow: unset;
+}
+
+.subcribe .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subcribe .banner .cooperate {
+  text-align: right;
+}
+.subcribe .banner .cooperate p {
+  margin-bottom: 0;
+}
+.subcribe .banner .cooperate a {
+  color: #36ccf9;
+}
+.subcribe .banner > .row {
+  width: 100%;
+}
+.subcribe .banner .left {
+  padding: 4rem 2rem;
+  background-color: #26357D;
+  color: #FFF;
+}
+.subcribe .banner .left h1 {
+  margin-top: 0;
+  font-size: 4rem;
+  color: #FFF;
+  margin-bottom: 4rem;
+}
+.subcribe .banner .left h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subcribe .banner .left h3 span {
+  color: #36ccf9;
+}
+.subcribe .banner .left #card-element {
+  margin-top: 5rem;
+  background-color: #FFF;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.subcribe .banner .left .so-btn {
+  background-color: #FFF;
+  color: #26357D;
+}
+.subcribe .banner .left .so-btn:hover {
+  transform: scale(1.05);
+}
+.subcribe .banner .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.subcribe .banner .right .card {
+  padding: 1.3rem 2rem;
+}
+.subcribe .banner .right .card h2 {
+  margin-bottom: 0;
+}
+.subcribe .banner .right .card .name h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.subcribe .banner .right .card .name .border-bottom {
+  border-bottom: 3px solid #26357D !important;
+  width: 4.5rem;
+}
+.subcribe .banner .right .card .price h2 {
+  font-size: 1.5rem;
+}
+.subcribe .banner .right .card h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5rem 0 1rem;
+}
+.subcribe .banner .right .card ul {
+  padding-left: 1rem;
+  margin-bottom: 5rem;
+}
+.subcribe .banner .right .focus {
+  background-color: #26357D;
+  color: #FFF;
+}
+.subcribe .banner .right .focus .name .border-bottom {
+  border-color: #FFF !important;
+}
+.subcribe .banner .right .focus .so-btn {
+  background-color: #FFF;
+  color: #26357D;
+}
+
+.subscribed .banner h1 {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 5rem;
+}
+.subscribed .banner > .row {
+  flex-direction: unset !important;
+}
+.subscribed .card {
+  transition: all 0.4s ease;
+}
+.subscribed .card:hover {
+  background-color: #E56A63;
+  color: #FFF;
+  cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+  .navbar {
+    padding: 0 8%;
+  }
+  .home-wrapper {
+    padding: 0 8%;
+  }
+  .home-wrapper .image {
+    width: 42rem;
+  }
+  .banner h1 {
+    margin-top: 14rem;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1300px) {
+  .home-wrapper {
+    padding: 0 8%;
+  }
+  .home-wrapper .image {
+    width: 28rem;
+  }
+  .banner h1 {
+    margin-top: 10rem;
+    font-size: 5rem;
+  }
+  .about {
+    height: auto;
+    overflow-y: scroll;
+  }
+  .about .banner h1 {
+    font-size: 3rem;
+    line-height: 1.2em;
+    margin-bottom: 0;
+  }
+  .about .banner .icons {
+    margin: unset;
+  }
+  .about .banner .icons .so-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .about .banner .icons .so-box svg {
+    width: 65px;
+    height: 55px;
+  }
+  .contact .banner {
+    margin-top: 8rem;
+    height: auto;
+  }
+  .contact .banner .so-form {
+    margin-top: 2rem;
+  }
+  .subcribe {
+    overflow-y: scroll;
+    height: auto;
+  }
+  .subcribe .banner {
+    height: auto;
+  }
+  .subcribe .banner .row {
+    flex-direction: column-reverse;
+  }
+  .subcribe .banner .left h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .subcribe .banner .left h3 {
+    margin: 1rem 0;
+  }
+  .subcribe .banner .right {
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+  }
+  .subcribe .banner .right .card {
+    margin-top: 4rem;
+    padding: 1.3rem 1rem;
+    height: 25rem;
+  }
+  .subcribe .banner .right .card .name h2 {
+    font-size: 1.3rem;
+  }
+  .subcribe .banner .right .card .price h2 {
+    font-size: 1.1rem;
+  }
+  .subscribed .banner h1 {
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+  }
+  .subscribed .banner .card {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  .navbar-toggler svg path {
+    fill: #36ccf9 !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: unset !important;
+    outline: unset !important;
+  }
+  .navbar-collapse {
+    background-color: #FFF;
+    padding: 1rem 2rem;
+  }
+  .navbar-collapse a {
+    color: #1d1d1d !important;
+  }
+  .hide-sm {
+    display: none;
+  }
+  .hide-lg {
+    display: block;
+  }
+  body {
+    font-size: 14px;
+  }
+  .home-wrapper {
+    padding: 0 8%;
+  }
+  .home-wrapper .image {
+    width: 18rem;
+    bottom: -7rem;
+    right: -2rem;
+  }
+  .banner h1 {
+    margin-top: 8rem;
+    font-size: 3rem;
+    line-height: 1.2em;
+  }
+  .banner h3 {
+    font-size: 1.1rem;
+  }
+  .about .banner {
+    margin-top: 8rem;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+  .about .banner .icons {
+    margin-bottom: 1rem;
+  }
+  .about .banner .icons .so-box {
+    margin: 1rem 0;
+  }
+  .contact .banner .so-form {
+    margin-top: unset;
+  }
+  .subcribe .banner .right .card {
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
