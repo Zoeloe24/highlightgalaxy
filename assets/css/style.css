@@ -449,8 +449,10 @@ html {
   }
   .home-wrapper {
     padding: 0 8%;
+    height: 130vh;
   }
   .home-wrapper .image {
+    position: absolute;
     width: 18rem;
     bottom: -7rem;
     right: -2rem;
