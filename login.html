@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Highlight Galaxy</title>
+    <title>Highlight Galaxy | Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,9 +16,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="home-wrapper">
-    <div class="elipse-top-left"></div>
-    <div class="elipse-bottom-right"></div>
+<body class="home-wrapper about register login">
     <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="index.html"><img src="./assets/images/logo-light.png" alt=""
                 class="img-fluid"></a>
@@ -28,14 +26,13 @@
                 <path d="M0 20H30V16.6667H0V20ZM0 11.6667H30V8.33333H0V11.6667ZM0 0V3.33333H30V0H0Z" fill="black" />
             </svg>
 
-
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
@@ -49,30 +46,38 @@
     </nav>
 
     <div class="banner">
-        <div class="row">
-            <div class="col-xl-6">
+        <div class="d-flex align-items-stretch justify-content-center">
+            <div class="so-image w-50">
+                <img src="./assets/images/login.jpg" data-aos="fade-right" data-aos-delay="200" alt="Login Image"
+                    class="img-fluid">
+            </div>
+            <div class="form w-50">
 
-                <h1 data-aos="fade-right" data-aos-delay="100">Unlock Your <span class="pink"> Potential </span></h1>
-                <h3 data-aos="fade-right" data-aos-delay="200"> Showcase Your Athletic Skills with a <span class="pink">
-                        FREE PERSONALIZED
-                        WEBSITE for High
-                        School Athletes! </span></h3>
-                <p data-aos="fade-right" data-aos-delay="400">
-                    Are you a talented high school athlete aspiring to make it big in the sports world?
-                    Stand out from the competition and catch the eye of college recruiters with a cutting-edge and
-                    personalized website that
-                    showcases your athletic prowess. I specialize in creating stunning and interactive websites tailored
-                    to highlight the
-                    unique skills and achievements of individual athletes.
-                </p>
-                <a href="about.html" class="btn so-btn" data-aos="fade-up" data-aos-delay="900">Learn More</a>
+                <form action="" method=" post" class="form-group so-form h-100 d-flex align-items-center"
+                    data-aos="fade-left" data-aos-delay="200">
+                    <div class="form-row align-items-center">
+                        <div class="col-md-12">
+                            <label for="username">Username*</label>
+                            <input type="text" name="username" id="username" class="form-control" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="password">Password*</label>
+                            <input type="password" name="password" id="password" class="form-control" required>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="d-flex align-items-center justify-content-between mt-4 buttons">
+                                <div class="already">
+                                    Don't have an account? <a href="register.html"><strong>signup</strong></a> instead.
+                                </div>
+                                <div class="btn btn so-btn mt-0" type="submit">Login</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
             </div>
         </div>
 
-    </div>
-    <div class="image" data-aos="fade-up" data-aos-delay="500">
-        <img src="./assets/images/players.png" alt="" class="img-fluid hide-sm">
-        <img src="./assets/images/baseball.png" alt="" class="img-fluid hide-lg">
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -86,7 +91,13 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        $('#number1').jQuerySimpleCounter({ end: 50, duration: 2000 });
+        $('#number2').jQuerySimpleCounter({ end: 65, duration: 2000 });
+        $('#number3').jQuerySimpleCounter({ end: 30, duration: 2000 });
+    </script>
 </body>
 
 </html>

@@ -13,8 +13,22 @@ body {
     font-size: 16px;
 }
 
+.btn-pink {
+    background-color: $pink;
+}
+
 .pink {
     color: $pink;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.no-scale {
+    &:hover {
+        transform: unset !important;
+    }
 }
 
 html {
@@ -35,6 +49,10 @@ html {
     z-index: 9;
     padding: 0 15%;
 
+    .dropdown-item.active {
+        background-color: $primary;
+        color: $white !important;
+    }
 
     .navbar-brand {
         width: 100px;
@@ -60,6 +78,29 @@ html {
             }
         }
 
+        .get-started {
+            .nav-link {
+                background-color: $pink;
+                color: $white !important;
+                border-radius: 2rem;
+                padding: .5rem 2.5rem;
+
+                &:focus {
+                    outline: unset !important;
+                    box-shadow: unset;
+                }
+            }
+
+            &:hover {
+                .nav-link {
+                    color: $white;
+                }
+
+                border-bottom: none;
+                transform: scale(1.1);
+            }
+        }
+
         .active {
             .nav-link {
                 color: $primary !important;
@@ -77,7 +118,7 @@ html {
 
 .home-wrapper {
     backdrop-filter: blur(12px);
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     padding: 0 15%;
     position: relative;
@@ -118,7 +159,7 @@ html {
 
 
 .banner {
-    height: 100vh;
+    min-height: 100vh;
 
     h1 {
         font-family: 'Inter',
@@ -214,6 +255,8 @@ html {
 
         img {
             border-radius: 5px;
+            height: 100%;
+            object-fit: cover;
         }
 
         .icons {
@@ -265,6 +308,13 @@ html {
                 }
 
                 height: 9rem;
+            }
+
+            .content {
+                h4 {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                }
             }
         }
 
@@ -443,6 +493,58 @@ html {
     }
 }
 
+.so-form.h-100 {
+    .form-control {
+        margin-bottom: 2rem !important;
+    }
+}
+
+.login {
+    .banner {
+        img {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+        }
+
+        .so-form {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+.profile {
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card {
+            width: 100%;
+            background-color: $primary;
+            border-radius: 8px;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: $cream;
+
+            h1 {
+                color: $pink;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+
+            h5 {
+                margin-bottom: 1rem;
+            }
+
+            .d-flex {
+                gap: 1rem;
+            }
+        }
+    }
+}
+
 @media (max-width:1440px) {
 
     .navbar {
@@ -482,7 +584,6 @@ html {
     }
 
     .about {
-        height: auto;
         overflow-y: scroll;
 
 
@@ -510,10 +611,21 @@ html {
         }
     }
 
+    .register {
+        .banner {
+            .icons {
+                .so-box {
+                    padding: 10px;
+                    margin-bottom: 3rem;
+                }
+            }
+
+        }
+    }
+
     .contact {
         .banner {
             margin-top: 8rem;
-            height: auto;
 
             .so-form {
                 margin-top: 2rem;
@@ -522,12 +634,9 @@ html {
     }
 
     .subcribe {
-        overflow-y: scroll;
-        height: auto;
 
         .banner {
 
-            height: auto;
 
             .row {
                 flex-direction: column-reverse;
@@ -585,6 +694,10 @@ html {
 }
 
 @media (max-width:450px) {
+    .hide-sm {
+        display: none;
+    }
+
     .navbar-toggler {
         svg {
             path {
@@ -621,8 +734,6 @@ html {
 
     .home-wrapper {
         padding: 0 8%;
-        height: 130vh;
-        // overflow-y: scroll;
 
         .image {
             position: absolute;
@@ -633,11 +744,10 @@ html {
     }
 
     .banner {
-        // height: auto;
 
         h1 {
             margin-top: 8rem;
-            font-size: 3rem;
+            font-size: 2.5rem;
             line-height: 1.2em;
         }
 
@@ -650,7 +760,6 @@ html {
     .about {
         .banner {
             margin-top: 8rem;
-            height: auto;
             padding-bottom: 3rem;
 
             .icons {
@@ -663,15 +772,37 @@ html {
         }
     }
 
+    .register {
+        .so-form {
+            .buttons {
+                flex-direction: column;
+                margin-top: 0 !important;
+                gap: 1rem;
+
+                .btn {
+                    order: 1;
+
+                }
+
+                .already {
+                    order: 2;
+                }
+            }
+        }
+    }
+
     .contact {
         .banner {
             .so-form {
                 margin-top: unset;
+                padding: 2rem;
             }
         }
     }
 
     .subcribe {
+        padding-bottom: 4rem;
+
         .banner {
             .right {
                 .card {
@@ -681,5 +812,25 @@ html {
         }
     }
 
+    .login {
+        .banner {
+            >.d-flex {
+                flex-direction: column;
+            }
+
+            .so-image,
+            .form {
+                width: 100% !important;
+            }
+
+            img {
+                border-radius: 5px 5px 0 0 !important;
+            }
+
+            .form form {
+                border-radius: 0 0 5px 5px !important;
+            }
+        }
+    }
 
 }
